@@ -1,6 +1,5 @@
 body{
     background-color: white;
-    border: 1px black solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,21 +11,18 @@ body{
     align-content:center;
     flex-wrap: wrap;
     margin: 100px;
-    height: 480px;
-    width: 480px;
-    border: 5px black solid;
+    height: 960px;
+    width: 960px;
+    border: 5px slateblue solid;
     border-radius: 10px;
 }
 .square {
     aspect-ratio: 1/1;
-    height: 118px;
-    width: 118px;
-    min-height: 46px;
-    min-width: 46px;
+    min-height: 9.6px;
     max-height: 241px;
     max-width: 241px;
-    background-color: white;
-    border: 1px solid grey;
+    /*background-color: white;*/
+    /*border: 1px solid grey; */
 }
 .hover{
     background-color: black;
