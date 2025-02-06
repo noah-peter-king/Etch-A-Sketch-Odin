@@ -12,13 +12,15 @@ function makeGrid(side){
       alert("Less than 100 pretty please") 
       break;
     }
-
     let square = document.createElement("div");    
     square.classList.add("square");
     container.appendChild(square);
     square.addEventListener("mouseover", (event) => {square.classList.add("hover")});
+    square.style.height = "" + 960 / side  + "px";
   }
+  
 }
+
 function removeGrid(){
   while (container.hasChildNodes()) {
     container.removeChild(container.firstChild);
