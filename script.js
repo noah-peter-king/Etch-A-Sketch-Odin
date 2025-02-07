@@ -8,14 +8,15 @@ makeGrid(100);
 
 function makeGrid(side){
   for (i = 0; i < side*side; i++){
-    if (side > 100){
-      alert("Less than 100 pretty please") 
+    if (side > 100 || side % 1 != 0){
+      alert("Less than 100 and a whole interger pwease") 
       break;
-    }
+    } 
     let square = document.createElement("div");    
     square.classList.add("square");
     container.appendChild(square);
-    square.addEventListener("mouseover", (event) => {square.classList.add("hover")});
+    square.addEventListener("mouseover", (event) => {square.style.backgroundColor = randomColor()});
+    
     square.style.height = "" + 960 / side  + "px";
   }
   
@@ -25,6 +26,12 @@ function removeGrid(){
   while (container.hasChildNodes()) {
     container.removeChild(container.firstChild);
   }
+}
+function randomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
 }
 
 //square.getElementsByClassName("square").style.height = "960 / 100";
